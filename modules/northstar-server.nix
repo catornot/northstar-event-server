@@ -74,7 +74,7 @@
       ns_private_match_countdown_length = 15;
       ns_private_match_last_mode = "mcp";
       ns_private_match_last_map = "mp_glitch";
-      net_chan_limit_mode = 2;
+      net_chan_limit_mode = 0; # probably a good idea to have this as 0
 
       playlistVars = [
         "max_players 12"
