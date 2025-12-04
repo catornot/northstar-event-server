@@ -12,12 +12,7 @@
 {
   # You can import other NixOS modules here
   imports = [
-    # If you want to use modules from other flakes (such as nixos-hardware):
-    # inputs.hardware.nixosModules.common-cpu-amd
-    # inputs.hardware.nixosModules.common-ssd
-
-    # You can also split up your configuration and import pieces of it here:
-    # ./users.nix
+    ../modules/northstar-server.nix # actual server
 
     # Import your generated (nixos-generate-config) hardware configuration
     ./hardware-configuration.nix
@@ -66,6 +61,8 @@
         "wheel"
         "networkmanager"
       ];
+      # TODO: change this
+      hashedPassword = "$6$/z6YyegHnNgDP/M7$tzSStC8OBpp8O/SGnQHFnM1dv.2g.agZTS7IGvUSgyqdS9bjTV5oLGFMDIU3LLwmvkhfK7n5AaPZzTX31AjRC0"; # password
     };
   };
 
